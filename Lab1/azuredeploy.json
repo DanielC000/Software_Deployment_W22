@@ -20,6 +20,9 @@
     "alwaysOn": {
       "type": "bool"
     },
+    "appName": {
+      "type": "string"
+    },
     "linuxFxVersion": {
       "type": "string"
     },
@@ -107,13 +110,13 @@
         "clientAffinityEnabled": false
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Insights/components', 'lab1webapp')]"
+        "[resourceId('Microsoft.Insights/components', parameters('appName'))]"
       ]
     },
     {
       "type": "Microsoft.Insights/components",
       "apiVersion": "2020-02-02",
-      "name": "lab1webapp",
+      "name": "[parameters('appName')]",
       "location": "[parameters('location')]",
       "kind": "web",
       "properties": {

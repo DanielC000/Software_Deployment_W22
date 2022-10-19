@@ -23,6 +23,9 @@
       "linuxFxVersion": {
         "value": "NODE|12-lts"
       },
+      "appName": {
+        "value": "lab1webapp"
+      },
       "storageName": {
         "value": "lab1storagetest"
       }
