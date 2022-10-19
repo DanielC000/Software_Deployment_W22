@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "subscriptionId": {
+        "value": "26a45bc8-d0e1-459d-8a2b-d10877e7bf17"
+      },
+      "name": {
+        "value": "lab1test"
+      },
+      "location": {
+        "value": "Central US"
+      },
+      "hostingPlanName": {
+        "value": "Lab1ServerFarm"
+      },
+      "serverFarmResourceGroup": {
+        "value": "myTestRG"
+      },
+      "alwaysOn": {
+        "value": false
+      },
+      "linuxFxVersion": {
+        "value": "NODE|12-lts"
+      },
+      "storageName": {
+        "value": "lab1storagetest"
+      }
+    }
+  }
+  
