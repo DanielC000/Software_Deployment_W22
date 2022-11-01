@@ -38,7 +38,7 @@ stages:
     - script: |
         cd ./Lab2/ExpressApp
         npm install
-        chmod 0777 ./node_modules/.bin/mocha
+        chmod 0777 ./node_modules/mocha
         npm test --if-present
         npm run build --if-present
       displayName: 'npm install, build and test'
