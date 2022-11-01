@@ -6,8 +6,15 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const appInsights = require("applicationinsights");
 
 var app = express();
+
+appInsights
+  .setup(
+    "InstrumentationKey=1125c731-afc2-4649-a41b-5ed52cde87b7;IngestionEndpoint=https://centralus-0.in.applicationinsights.azure.com/;LiveEndpoint=https://centralus.livediagnostics.monitor.azure.com/"
+  )
+  .start();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
