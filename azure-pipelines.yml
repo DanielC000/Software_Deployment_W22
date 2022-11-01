@@ -47,7 +47,7 @@ stages:
     - task: PublishTestResults@2
       inputs:
         testResultsFormat: 'JUnit'
-        testResultsFiles: '*/test-results.xml'
+        testResultsFiles: 'test-results.xml'
         searchFolder: '$(System.DefaultWorkingDirectory)/Lab2/ExpressApp'
         testRunTitle: 'Running Tests'
 
