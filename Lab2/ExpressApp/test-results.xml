@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.002" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-11-01T19:21:38" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Array" timestamp="2022-11-01T19:21:38" tests="0" file="C:\Users\danie\Documents\GitHub\Software_Deployment_W22\Lab2\ExpressApp\tests\lab1tests.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="#indexOf()" timestamp="2022-11-01T19:21:38" tests="1" file="C:\Users\danie\Documents\GitHub\Software_Deployment_W22\Lab2\ExpressApp\tests\lab1tests.js" time="0.002" failures="0">
+    <testcase name="Array #indexOf() should return -1 when the value is not present" time="0.000" classname="should return -1 when the value is not present">
+    </testcase>
+  </testsuite>
+</testsuites>
