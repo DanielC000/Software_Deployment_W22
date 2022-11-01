@@ -18,7 +18,7 @@ variables:
   environmentName: 'lab1test'
 
   # Agent VM image name
-  vmImageName: 'windows-latest'
+  vmImageName: 'ubuntu-latest'
 
 stages:
 - stage: Build
