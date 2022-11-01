@@ -42,6 +42,13 @@ stages:
         npm test --if-present
       displayName: 'npm install, build and test'
 
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/test-results.xml'
+        searchFolder: '$(System.DefaultWorkingDirectory)/Lab2/ExpressApp'
+        testRunTitle: 'Running Tests'
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
