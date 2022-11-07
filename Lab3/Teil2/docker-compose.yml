@@ -10,7 +10,7 @@ services:
       MYSQL_ROOT_PASSWORD: mysqlroot
       MYSQL_DB: wordpress
       MYSQL_USER: lab3
-      MYSQL_PASS: lab31234567
+      MYSQL_PASSWORD: lab31234567
     
   wordpress:
     depends_on:
