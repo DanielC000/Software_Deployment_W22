@@ -7,7 +7,7 @@ services:
       - mysql_data:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: mysqlroot
+      MYSQL_ROOT_PASSWORD: lab31234567
       MYSQL_DB: wordpress
       MYSQL_USER: lab3
       MYSQL_PASSWORD: lab31234567
