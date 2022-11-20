@@ -39,7 +39,7 @@ kann man die Container builden um sie danach mit dem
 docker-compose up -d
 ```
 
-zu starten.
+wieder zu starten.
 
 Nach dem start kann WP unter `localhost:80` erreicht werden.
 
