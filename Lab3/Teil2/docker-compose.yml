@@ -1,31 +1,42 @@
 version: "2"
     
 services:
-  mysql:
-    image: mysql
-    volumes:
-      - mysql_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: lab31234567
-      MYSQL_DB: wordpress
-      MYSQL_USER: lab3
-      MYSQL_PASSWORD: lab31234567
-    
-  wordpress:
-    depends_on:
-      - mysql
-    image: wordpress
-    volumes:
-      - wordpress_data:/var/www/html
+   # MySQL DB
+  db:
+    build: ./MySQL
     ports:
-      - "8080:80"
-    restart: always
+      - "8080:3306"
+    volumes:
+      - type: volume
+        source: mysql_data
+        target: /var/lib/mysql
     environment:
-      WORDPRESS_DB_HOST: mysql:3306
-      WORDPRESS_DB: wordpress
-      WORDPRESS_DB_USER: lab3
-      WORDPRESS_DB_PASS: lab31234567
+      DB_USER: wordpress
+      DB_PASSWORD: wordpress
+      DB_NAME: wordpress
+    restart: always
+    networks:
+      - wpsite
+  # WordPress
+  wordpress:
+    build: ./WordPress
+    depends_on:
+      - db
+    ports:
+      - '80:80'
+    restart: always
+    volumes:
+      - type: volume
+        source: wordpress_data
+        target: /etc/wordpress
+      - type: volume
+        source: wpuploads
+        target: /var/www/html/wp-content/uploads
+    networks:
+      - wpsite
+networks:
+  wpsite:
 volumes:
   mysql_data: {}
   wordpress_data: {}
+  wpuploads: {}
