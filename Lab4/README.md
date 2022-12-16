@@ -31,7 +31,7 @@ After this had finished deploying I checked if the deployment was successful by 
 kubectl get [secrets/pods/pvc/...]
 ```
 
-I used this [guide](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/) for creataing certain files in addition to the guide mentioned above.
+I used this [guide](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/) for creataing certain files in addition to the tutorial mentioned above.
 
 ## Cluster URL
 The cluster url is:
